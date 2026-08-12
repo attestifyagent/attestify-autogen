@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "attestify-autogen"
+version = "0.1.0"
+description = "AutoGen tool integration for Attestify — governed AI loop execution, receipts, and audit trails"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+keywords = ["attestify", "autogen", "ai-agents", "receipts", "governance", "x402"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+  "pyautogen>=0.2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+Homepage = "https://attestifyos.com"
+Repository = "https://github.com/attestifyagent/attestify-os"
+Documentation = "https://attestifyos.com/docs"
+
+[tool.hatch.build.targets.wheel]
+packages = ["attestify_autogen"]
